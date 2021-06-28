@@ -44,14 +44,14 @@ body {
   margin-left: auto;
   margin-right: 50px;
 }
-.btn-group button:first-child {
+.btn-group a:first-child {
   padding: 10px 20px;
   background-color: transparent;
   border: 2px solid #f1756c;
   color: #f1756c;
   margin-right: 20px;
 }
-.btn-group button {
+.btn-group a {
   padding: 10px 20px;
   background-color: transparent;
   border: 2px solid #7f8c8d;
