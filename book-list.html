@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Products</title>
+    <link rel="stylesheet" href="styles/book-list.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="page-header">
+      <div class="content-page-header">
+        <h3>Cartile din biblioteca!!!</h3>
+        <a href="/logout" class="btn">Logout</a>
+      </div>
+    </div>
+
+    <section class="display-products">
+      <ul>
+        <li>Name</li>
+        <li>Weight</li>
+        <li>Price</li>
+        <li>Actions</li>
+      </ul>
+      <c:forEach items="${products}" var="product">
+        <ul>
+          <li><c:out value="${product.name}" /></li>
+          <li><c:out value="${product.weight}" /></li>
+          <li><c:out value="${product.price}" /></li>
+          <li>
+            <a href="/displayProducts/${product.name}/deleteProduct" class="btn"
+              >DeleteProduct</a
+            >
+            <a href="/displayProducts/${product.name}/editProduct" class="btn"
+              >EditProduct</a
+            >
+          </li>
+        </ul>
+      </c:forEach>
+    </section>
+    <div class="add-book">
+      <a href="/displayProducts/addProduct" class="btn">Adauga Carte</a>
+    </div>
+  </body>
+</html>
